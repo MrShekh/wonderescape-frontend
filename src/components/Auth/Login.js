@@ -54,7 +54,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("hhttps://wonderescape-bakcend.onrender.com/login/api", {
+      const response = await fetch("https://wonderescape-bakcend.onrender.com/login/api", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
