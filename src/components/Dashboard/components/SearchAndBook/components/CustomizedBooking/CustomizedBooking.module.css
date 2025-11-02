@@ -1,0 +1,323 @@
+/* CustomizedBooking.module.css */
+
+.customizedBookingContainer {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Progress Bar */
+.progressBar {
+  margin-bottom: 40px;
+}
+
+.progressSteps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.progressSteps::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e0e0e0;
+  z-index: 1;
+}
+
+.step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step svg {
+  color: #636e72;
+  font-size: 1.2rem;
+}
+
+.step.active {
+  border-color: #00b894;
+  background: #00b894;
+}
+
+.step.active svg {
+  color: white;
+}
+
+/* Form Content */
+.formContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formStep {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formStep h3 {
+  color: #2d3436;
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Input Groups */
+.inputGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputGroup svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00b894;
+  font-size: 1.2rem;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #00b894;
+  box-shadow: 0 0 0 4px rgba(0, 184, 148, 0.1);
+}
+
+/* Date Inputs */
+.dateInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Options Section */
+.optionsSection {
+  margin-bottom: 32px;
+}
+
+.optionsSection h4 {
+  color: #2d3436;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.optionButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  color: #636e72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.optionButton svg {
+  font-size: 1.5rem;
+  color: #00b894;
+}
+
+.optionButton:hover {
+  border-color: #00b894;
+  background: rgba(0, 184, 148, 0.05);
+}
+
+.optionButton.active {
+  border-color: #00b894;
+  background: rgba(0, 184, 148, 0.1);
+  color: #2d3436;
+}
+
+/* Tag Grid */
+.tagGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  background: white;
+  color: #636e72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.tag:hover {
+  border-color: #00b894;
+  background: rgba(0, 184, 148, 0.05);
+}
+
+.tag.active {
+  border-color: #00b894;
+  background: #00b894;
+  color: white;
+}
+
+/* Budget Options */
+.budgetOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.budgetButton {
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  color: #636e72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.budgetButton:hover {
+  border-color: #00b894;
+  background: rgba(0, 184, 148, 0.05);
+}
+
+.budgetButton.active {
+  border-color: #00b894;
+  background: #00b894;
+  color: white;
+}
+
+/* Navigation Buttons */
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.backButton,
+.nextButton,
+.submitButton {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton {
+  background: white;
+  border: 2px solid #e0e0e0;
+  color: #636e72;
+}
+
+.backButton:hover {
+  border-color: #636e72;
+  color: #2d3436;
+}
+
+.nextButton,
+.submitButton {
+  background: #00b894;
+  border: none;
+  color: white;
+}
+
+.nextButton:hover,
+.submitButton:hover {
+  background: #00a383;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 184, 148, 0.2);
+}
+
+/* Recommendations Section */
+.recommendations {
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.recommendations h4 {
+  color: #2d3436;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .customizedBookingContainer {
+    padding: 20px;
+  }
+
+  .dateInputs {
+    grid-template-columns: 1fr;
+  }
+
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .budgetOptions {
+    grid-template-columns: 1fr;
+  }
+
+  .navigationButtons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .backButton,
+  .nextButton,
+  .submitButton {
+    width: 100%;
+  }
+} 

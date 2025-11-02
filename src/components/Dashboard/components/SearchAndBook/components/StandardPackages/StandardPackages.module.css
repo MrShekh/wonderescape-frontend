@@ -1,0 +1,184 @@
+/* StandardPackages.module.css */
+
+.standardPackages {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.standardPackages h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.packageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.packageCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.packageCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.packageImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.packageImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.packageCard:hover .packageImage img {
+  transform: scale(1.05);
+}
+
+.packageContent {
+  padding: 1.5rem;
+}
+
+.packageContent h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.packageDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+}
+
+.detailItem svg {
+  color: #3498db;
+}
+
+.description {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.inclusions {
+  margin-bottom: 1.5rem;
+}
+
+.inclusions h4 {
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.inclusions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inclusions li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.inclusions li:last-child {
+  border-bottom: none;
+}
+
+.inclusions li svg {
+  color: #3498db;
+}
+
+.bookButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookButton:hover {
+  background-color: #2980b9;
+}
+
+.bookingModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .standardPackages {
+    padding: 1rem;
+  }
+
+  .packageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .packageImage {
+    height: 180px;
+  }
+
+  .packageContent {
+    padding: 1rem;
+  }
+
+  .packageContent h3 {
+    font-size: 1.25rem;
+  }
+
+  .modalContent {
+    max-height: 95vh;
+  }
+} 

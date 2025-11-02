@@ -1,0 +1,201 @@
+.dealsContainer {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #636e72;
+}
+
+.dealsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.dealCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.dealCard:hover {
+  transform: translateY(-5px);
+}
+
+.dealBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e74c3c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.dealImage {
+  height: 200px;
+  overflow: hidden;
+}
+
+.dealImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.dealCard:hover .dealImage img {
+  transform: scale(1.05);
+}
+
+.dealContent {
+  padding: 1.5rem;
+}
+
+.dealContent h3 {
+  font-size: 1.25rem;
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+}
+
+.dealContent p {
+  color: #636e72;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.dealDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #636e72;
+}
+
+.detailItem svg {
+  color: #0984e3;
+}
+
+.claimButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.claimButton:hover {
+  background: #0773c5;
+}
+
+.personalizedDeals {
+  margin-top: 4rem;
+}
+
+.personalizedDeals h2 {
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.personalizedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.personalizedCard {
+  background: linear-gradient(135deg, #0984e3, #74b9ff);
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.personalizedContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.personalizedContent p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.personalizedDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.personalizedCard .detailItem {
+  color: white;
+}
+
+.personalizedCard .detailItem svg {
+  color: white;
+}
+
+.personalizedCard .claimButton {
+  background: white;
+  color: #0984e3;
+  font-weight: 700;
+}
+
+.personalizedCard .claimButton:hover {
+  background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .dealsContainer {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .dealsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .personalizedGrid {
+    grid-template-columns: 1fr;
+  }
+} 

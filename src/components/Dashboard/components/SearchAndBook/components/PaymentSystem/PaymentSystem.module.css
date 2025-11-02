@@ -1,0 +1,653 @@
+/* PaymentSystem.module.css */
+
+.paymentSystem,
+.paymentStatus {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.paymentSystem {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Terms & Conditions Section */
+.termsSection {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.termsCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+.termsCheckbox input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.termsCheckbox button {
+  background: none;
+  border: none;
+  color: #4299e1;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.termsCheckbox button:hover {
+  color: #3182ce;
+}
+
+/* Terms Modal */
+.termsModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.termsContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4a5568;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #2d3748;
+}
+
+/* Payment Status States */
+.successContent,
+.failedContent {
+  padding: 2rem;
+}
+
+/* Success State Styles */
+.successContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.successHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.successIcon {
+  font-size: 4rem;
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.successHeader h2 {
+  font-size: 2rem;
+  color: #1a202c;
+  margin: 0;
+}
+
+.successHeader p {
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.bookingDetails {
+  background-color: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bookingId {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.value {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.confirmationMessage {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.messageIcon {
+  color: #4299e1;
+  font-size: 1.5rem;
+}
+
+.confirmationMessage p {
+  margin: 0;
+  color: #4a5568;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+.actionButton svg {
+  font-size: 1.2rem;
+}
+
+.failedIcon {
+  font-size: 4rem;
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.bookingDetails {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.bookingDetails h4 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.retryButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retryButton:hover {
+  background-color: #3182ce;
+}
+
+.supportLink {
+  padding: 0.75rem 1.5rem;
+  color: #4299e1;
+  text-decoration: none;
+  border: 1px solid #4299e1;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.supportLink:hover {
+  background-color: #ebf4ff;
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.paymentMethods {
+  margin-bottom: 2rem;
+}
+
+.paymentMethods h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.methodCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.methodCard:hover {
+  border-color: #4299e1;
+  background-color: #f7fafc;
+}
+
+.methodCard.selected {
+  border-color: #4299e1;
+  background-color: #ebf4ff;
+}
+
+.methodCard svg {
+  font-size: 2rem;
+  color: #4299e1;
+  margin-bottom: 0.5rem;
+}
+
+.methodCard span {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.paymentForm {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.otherMethod {
+  text-align: center;
+  padding: 2rem;
+  color: #4a5568;
+}
+
+.promoSection {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.promoSection h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.promoInput {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.promoInput svg {
+  font-size: 1.5rem;
+  color: #4299e1;
+}
+
+.promoInput input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.promoInput button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promoInput button:hover {
+  background-color: #3182ce;
+}
+
+.orderSummary {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.orderSummary h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #4a5568;
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  border-top: 2px solid #e2e8f0;
+  font-weight: 600;
+  color: #333;
+}
+
+.payButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.payButton:hover:not(:disabled) {
+  background-color: #3182ce;
+}
+
+.payButton:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+/* Ensure payment status is visible */
+.paymentStatus {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .paymentSystem {
+    padding: 1rem;
+  }
+
+  .methodGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .successContent {
+    padding: 1.5rem;
+  }
+
+  .bookingDetails {
+    padding: 1rem;
+  }
+
+  .actionButton,
+  .retryButton,
+  .supportLink {
+    width: 100%;
+  }
+}
+
+.upiForm {
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.upiForm h3 {
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.upiOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.qrSection {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.qrIcon {
+  font-size: 8rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.orDivider {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.orDivider::before,
+.orDivider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.orDivider::before {
+  left: 0;
+}
+
+.orDivider::after {
+  right: 0;
+}
+
+.upiIdSection {
+  width: 100%;
+  max-width: 400px;
+}
+
+.upiIdSection .formGroup {
+  margin-bottom: 1rem;
+}
+
+.upiIdSection label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.upiIdSection input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.upiIdSection input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.verifyButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.verifyButton:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.verifyButton:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .upiForm {
+    padding: 1rem;
+  }
+
+  .qrIcon {
+    font-size: 6rem;
+  }
+
+  .upiIdSection {
+    max-width: 100%;
+  }
+} 

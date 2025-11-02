@@ -1,0 +1,169 @@
+.routeOptionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.routeCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.routeCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.routeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.routeHeader h3 {
+  color: #2d3748;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.routeMeta {
+  display: flex;
+  gap: 1rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.routeMeta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.routeSegments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.segment {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.segmentIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #00b894;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.segmentDetails {
+  flex: 1;
+}
+
+.segmentRoute {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.exchangeIcon {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.segmentMeta {
+  display: flex;
+  gap: 1.5rem;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.routeActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.selectButton, .detailsButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.selectButton {
+  background: #00b894;
+  color: white;
+  border: none;
+  flex: 1;
+}
+
+.selectButton:hover {
+  background: #00a382;
+}
+
+.detailsButton {
+  background: transparent;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+}
+
+.detailsButton:hover {
+  background: #f7fafc;
+  border-color: #a0aec0;
+}
+
+@media (max-width: 768px) {
+  .routeHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .routeMeta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .segmentRoute {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .exchangeIcon {
+    transform: rotate(90deg);
+  }
+
+  .segmentMeta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .routeActions {
+    flex-direction: column;
+  }
+} 

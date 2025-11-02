@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.tripsContainer {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 24px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tab {
+  padding: 12px 32px;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  color: #636e72;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+  font-weight: 500;
+  min-width: 140px;
+  text-align: center;
+}
+
+.tab:hover {
+  color: #00b894;
+}
+
+.tab.active {
+  color: #00b894;
+  position: relative;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00b894;
+}
+
+.tripsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  padding: 16px 0;
+}
+
+.tripCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.tripCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: #00b894;
+}
+
+.tripImage {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tripImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tripCard:hover .tripImage img {
+  transform: scale(1.05);
+}
+
+.tripStatus {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+.tripContent {
+  padding: 24px;
+  background: linear-gradient(to bottom, white, #f8f9fa);
+  font-family: 'Poppins', sans-serif;
+}
+
+.destination {
+  font-size: 1.75rem;
+  color: #2d3436;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.destination svg {
+  color: #00b894;
+  font-size: 1.2rem;
+}
+
+.tripDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dateRange,
+.accommodation,
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dateRange svg,
+.accommodation svg,
+.transport svg {
+  color: #00b894;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+.activities {
+  margin-top: 20px;
+}
+
+.activities h4 {
+  color: #2d3436;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.activityTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.activityTag {
+  background: #e0f7f4;
+  color: #00b894;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.activityTag:hover {
+  background: #00b894;
+  color: white;
+}
+
+.viewDetailsBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.viewDetailsBtn:hover {
+  background: #00a383;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 184, 148, 0.2);
+}
+
+.noTrips {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.noTrips svg {
+  font-size: 48px;
+  color: #00b894;
+  margin-bottom: 16px;
+}
+
+.noTrips h3 {
+  color: #2d3436;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.noTrips p {
+  color: #636e72;
+  margin-bottom: 24px;
+}
+
+.planTripSection {
+  margin-top: 48px;
+  text-align: center;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.planTripSection h2 {
+  font-size: 1.75rem;
+  color: #2d3436;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.planTripSection p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.planTripBtn {
+  padding: 12px 32px;
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.planTripBtn:hover {
+  background: #00a383;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 184, 148, 0.2);
+}
+
+.planTripBtn svg {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .tripsContainer {
+    padding: 16px;
+  }
+
+  .tripsList {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    gap: 8px;
+  }
+
+  .tab {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.closeBtn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modalImage {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.modalImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.modalImage h2 {
+  color: white;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.modalContent {
+  padding: 24px;
+}
+
+.modalSection {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modalSection:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.modalSection h3 {
+  color: #2d3436;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modalSection h3 svg {
+  color: #00b894;
+}
+
+.modalSection p {
+  color: #636e72;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.modalSection strong {
+  color: #2d3436;
+  font-weight: 500;
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.highlightsList li {
+  color: #636e72;
+  padding: 8px 12px;
+  background: #f5f6fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.highlightsList li::before {
+  content: '•';
+  color: #00b894;
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 1.5rem !important;
+  color: #00b894 !important;
+  font-weight: 600;
+}
+
+.price::before {
+  content: none;
+}
+
+.price svg {
+  color: #00b894;
+  font-size: 1.2rem;
+}
+
+.description {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 16px 0;
+}
+
+.packageIncludes {
+  margin-top: 24px;
+}
+
+.packageIncludes h4 {
+  font-size: 1.1rem;
+  color: #2d3436;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.includesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.includeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.includeItem svg {
+  color: #00b894;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .modalImage {
+    height: 200px;
+  }
+
+  .modalImage h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlightsList {
+    grid-template-columns: 1fr;
+  }
+} 
+
+

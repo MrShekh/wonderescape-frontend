@@ -1,0 +1,518 @@
+.bookingConfirmation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.progressStep {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.progressStep::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+.progressStep::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-color: #e2e8f0;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.progressStep.active {
+  color: #3498db;
+}
+
+.progressStep.active::before {
+  background-color: #3498db;
+}
+
+.progressStep.active::after {
+  background-color: #3498db;
+}
+
+.step {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.packageDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.destination {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-top: -0.5rem;
+}
+
+.itinerary {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.itinerary h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.itinerary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.itinerary li {
+  padding: 0.5rem 0;
+  color: #64748b;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.itinerary li:last-child {
+  border-bottom: none;
+}
+
+.addOns {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.addOnItem {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.addOnItem:last-child {
+  border-bottom: none;
+}
+
+.addOnItem label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #475569;
+  cursor: pointer;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  color: #475569;
+  font-weight: 500;
+}
+
+.formGroup input {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.costBreakdown {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.costItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.costTotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  border-top: 2px solid #e2e8f0;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.cancellationPolicy {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cancellationPolicy ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cancellationPolicy li {
+  padding: 0.5rem 0;
+  color: #64748b;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.cancellationPolicy li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.modifyButton,
+.proceedButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.modifyButton {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.modifyButton:hover {
+  background-color: #e2e8f0;
+}
+
+.proceedButton {
+  background-color: #3498db;
+  color: white;
+  flex: 1;
+}
+
+.proceedButton:hover {
+  background-color: #2980b9;
+}
+
+.paymentMethods {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.methodCard {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.methodCard:hover {
+  border-color: #3498db;
+}
+
+.methodCard.selected {
+  border-color: #3498db;
+  background-color: #ebf8ff;
+}
+
+.promoCode {
+  margin: 2rem 0;
+}
+
+.promoInput {
+  display: flex;
+  gap: 1rem;
+}
+
+.promoInput input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.promoInput button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promoInput button:hover {
+  background-color: #2980b9;
+}
+
+.finalAmount {
+  margin: 2rem 0;
+  text-align: right;
+}
+
+.finalAmount span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.payButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payButton:hover {
+  background-color: #2980b9;
+}
+
+.successMessage {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.successIcon {
+  font-size: 4rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.successMessage h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.successMessage p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.bookingDetails {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.bookingId {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.bookingId .label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.bookingId .value {
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #4CAF50;
+}
+
+.confirmationMessage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+}
+
+.messageIcon {
+  color: #4CAF50;
+}
+
+.downloadOptions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.downloadButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.downloadButton:hover {
+  background: #45a049;
+}
+
+.finalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.viewTripsButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.viewTripsButton:hover {
+  background: #1976D2;
+}
+
+.homeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.homeButton:hover {
+  background: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .bookingConfirmation {
+    padding: 1rem;
+  }
+
+  .progressBar {
+    padding: 0;
+  }
+
+  .progressStep {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .step {
+    padding: 1rem;
+  }
+
+  .step h2 {
+    font-size: 1.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .modifyButton,
+  .proceedButton {
+    width: 100%;
+  }
+
+  .methodGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .downloadOptions,
+  .finalActions {
+    flex-direction: column;
+  }
+
+  .downloadButton,
+  .viewTripsButton,
+  .homeButton {
+    width: 100%;
+  }
+} 
